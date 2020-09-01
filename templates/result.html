@@ -1,24 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Restaurant Review - Sentiment Analyser</title>
+        <style>
+            body{
+                background-color: white;
+            }
+            h2{
+                position: relative;
+                width: auto;
+    
+            }
+            .results{
+                position: absolute;
+                right: 40%;
+                top: 25%;
+                
+                margin: 20px;
+                max-width: 500px;
+                padding: 16px;
+                background-color: transparent;
+            }
+            .h1{
+                font-size: 50px;
+                margin-top: 15%;
+                background-color: teal;
+                
+                }
+            .footer{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: transparent;
+                color: white;
+                text-align: center;
+                }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Price prediction_text</title>
-    <style>
-        body{
-            background-color: rgb(145, 206, 200);
-            
-        }
-        h3{
-            text-align: center;
-            font-size: 50px;
-            
-        }
-    </style>
-</head>
+                .danger{
+                color: #ff0000;
+                }
 
-<body>
-    <h3>{{ prediction_text }}</h3>
-</body>
+                .safe{
+                color: green;}
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Restaurant Review's</h1> 	
+        
+        <!-- Result -->
+
+		<div class="results">
+			{% if prediction==1 %}
+				<h2><span class='safe'>Great! POSITIVE Review.</span></h2>
+				
+			{% elif prediction==0 %}
+				<h2><span class='danger'>Oops! NEGATIVE Review.</span></h2>
+				
+			{% endif %}
+		</div>
+       
+        
+
+        <div class='footer'>
+            <div class="contact">
+            </div>
+            <p class='footer-description'>Made by Dishaa Agarwal.</p>
+        </div>
+
+    </body>
 </html>
