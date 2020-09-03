@@ -8,4 +8,4 @@
 
 4. I was able to achieve an accuracy of 78.05% using Multinomial Naive Bayes theorem.
 
-5.https://restaurant-review-2020.herokuapp.com/
+5.[Web Deployment Link-](https://restaurant-review-2020.herokuapp.com/)
